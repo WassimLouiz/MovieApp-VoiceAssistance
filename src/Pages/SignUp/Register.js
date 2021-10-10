@@ -1,24 +1,20 @@
 import React from "react";
 import "../../style.scss";
-import { Link } from 'react-router-dom';
-
 import loginImg from "./login.svg";
-
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-
 
 class Register extends React.Component{
 
     signUp() {
 
         const auth = getAuth();
-
         const email = document.querySelector('#email').value;
         const password = document.querySelector('#password').value;
         if (email !='' & password!=''){
         createUserWithEmailAndPassword(auth ,email, password)
           .then((u) => {
             console.log('Successfully Signed Up');
+            
           })
           .catch((err) => {
             console.log('Error: ' + err.toString());
@@ -53,9 +49,9 @@ class Register extends React.Component{
                     </div>
                 </div>
                 <div className="footer">
-                    <Link to='/' onClick={this.signUp} type="button"  className="btn">
+                    <a href='/' onClick={this.signUp,()=>{this.props.onConnected(true)}} type="button"  className="btn">
                         Register
-                    </Link>
+                    </a>
                 </div>
             </div>
         );

@@ -1,17 +1,18 @@
 import * as firebase from "firebase/app";
-import 'firebase/auth';
+import 'firebase/storage'; 
+import 'firebase/auth'; 
+require('firebase/auth')
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAnwrX0Sa6oLx_yxn_94oYOqltZO9jaVO4",
-  authDomain: "movieauthentication-a12cb.firebaseapp.com",
-  databaseURL: "https://movieauthentication-a12cb-default-rtdb.firebaseio.com",
-  projectId: "movieauthentication-a12cb",
-  storageBucket: "movieauthentication-a12cb.appspot.com",
-  messagingSenderId: "198218473298",
-  appId: "1:198218473298:web:1f8deacfe7d833f450648b",
-  measurementId: "G-76W5V7MLGR"
+  apiKey: "AIzaSyCP7YQ3Tzc4lh3ByMZFo0mL9w5PGJWvhfg",
+  authDomain: "moviesalanauthentification.firebaseapp.com",
+  projectId: "moviesalanauthentification",
+  storageBucket: "moviesalanauthentification.appspot.com",
+  messagingSenderId: "837758657647",
+  appId: "1:837758657647:web:88454fa6de3ec85d17199a",
+  measurementId: "G-5827P04W4Q"
 };
 
 // Initialize Firebase
 const fire = firebase.initializeApp(firebaseConfig);
-export default fire
+export default fire;

@@ -1,21 +1,23 @@
 import React from "react";
 import "../../style.scss";
+import {Link} from "react-router-dom";
 import "./Login.scss";
-import { Link } from 'react-router-dom';
 import loginImg from "./login.svg";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import 'firebase/auth';
+require('firebase/auth');
 
 class Login extends React.Component{
     login() {
         const auth = getAuth();
-
         const email = document.querySelector('#email').value;
         const password = document.querySelector('#password').value;
 
         if (email != '' & password !=''){
-        signInWithEmailAndPassword(auth, email, password)
+        signInWithEmailAndPassword(auth,email, password)
           .then((u) => {
             console.log('Successfully Logged In');
+            
           })
           .catch((err) => {
             console.log('Error: ' + err.toString());
@@ -47,7 +49,7 @@ class Login extends React.Component{
                     </div>
                 </div>
                 <div className="footer">
-                    <Link to='/' type="button" onClick={this.login} className="btn">
+                    <Link to='/' type="button" onClick={this.login,()=>{this.props.onConnected(true)}} className="btn" >
                         Login
                     </Link>
                 </div>
