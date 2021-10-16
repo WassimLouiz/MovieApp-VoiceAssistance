@@ -1,3 +1,12 @@
+# MovieApp-VoiceAssistance
+
+This project is a web application created with ReactJS as a frontend and APIs as well firebase to gather and get the data.
+This movies web application is a reactive website providing the trendings and all the movies for the users as well as a Voice assitance with ALAN-AI making the users experience far better and bringing life and interaction into the website.
+
+This application displays all the trending movies with a average rate given by the viewers as well as a small description for every movie and a hover of all the main actors and finally a quick access to the official trailer on youtube.
+
+This website also have more pages which are the movies page where you can find all the movies in all categories as well as a easy way to filter them, the same goes for the TV-SHOWS and finally a search page for both the movies and tv shows simultaneously.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
